@@ -754,148 +754,125 @@
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>   
 <script>
 (function(){
     
-
-    let cartLinks = document.querySelectorAll('.cart-page-nav a');
-    let cartPageContent = document.querySelector('.cart-page-content');
-
-    let mobileViewport = window.matchMedia('(max-width: 991.98px)');
-    
-    mobileViewport.addListener(mobileViewportTest);
-    
-    function mobileViewportTest(e){
-        if (e.matches) {
-            updateMobileView();
-        } else {
-            updateDesktopView();
-            
-        }
-    }
-    
-    function handleCollapse(){
-
-        let target = this.getAttribute('data-target');
-
-        $(target).collapse('toggle');
-
-    }
-
-    function updateMobileView() {
-
-        cartLinks.forEach(function(item){
-
-            item.parentElement.classList.remove('active');
-            let cartContent = document.querySelector(item.getAttribute('data-target'));
-            cartContent.classList.remove('tab-pane', 'active');
-            cartContent.classList.add('collapse');
-            item.parentElement.appendChild(cartContent);
-            
-            //item.addEventListener('click', handleCollapse);
-
-        });
-        
-    }
-
-    function updateDesktopView() {
-
-        cartLinks.forEach(function(item){ 
-
-            item.parentElement.classList.remove('active');
-            //item.removeEventListener('click', handleCollapse);
-            let cartContent = document.querySelector(item.getAttribute('data-target'));
-            cartContent.classList.remove('collapse', 'in');
-            cartContent.classList.add('tab-pane');
-            cartContent.removeAttribute('style');
-            cartPageContent.appendChild(cartContent);
-
-        });
-
-        $(cartLinks[0]).tab('show');
-    }
-
-
-    
-    
-
     class multiStepForm {
         constructor(form) {
+            this.mobileViewport = window.matchMedia('(max-width:991.98px)');
+            this.isMobile = this.mobileViewport.matches;
+            
             this.links = Array.from(form.querySelectorAll('.cart-page-navbar a'));
-            this.tabContents = [];
+            this.formTabsWrapper = form.querySelector('.cart-page-content');
+            this.formTabs = [];
 
             this.links.forEach((link) => {
                 let target = link.getAttribute('data-target');
-                this.tabContents.push(document.querySelector(target));
+                this.formTabs.push(form.querySelector(target));
             });
             
-        
+            this.stepsNumber = this.links.length;
+
             this.current = 0
-            this.nav = {
-                prev: null,
-                next:null
-            }
-            this.updateNav();
 
             this.prevButton = document.getElementById('cart-form-nav-prev');
             this.nextButton = document.getElementById('cart-form-nav-next');
-
-            this.assignEvents();
             
-            if (mobileViewport.matches) {
-                $(this.tabContents[0]).collapse('show');
-            } else {
-                $(this.links[0]).tab('show');
-            }
-           
+            if (this.isMobile) {
+                this.updateMobileView();
+            } 
+            
+            this.assignEvents();
+
+            this.showTab();
         }
         
-        collapseTabs(){
-            this.tabContents.forEach(tab => {
-                $(tab).collapse('hide');
+        updateMobileView() {
+            
+            this.formTabs.forEach(tab => {
+                tab.classList.remove('tab-pane', 'active');
+                tab.classList.add('collapse');
+            });
+
+            this.links.forEach((link, index) => {
+
+                link.parentElement.classList.remove('active');
+                link.parentElement.appendChild(this.formTabs[index]);
+                
+            });
+
+        }
+
+        updateDesktopView(){
+
+            this.formTabs.forEach(tab => {
+                tab.classList.remove('collapse', 'in');
+                tab.classList.add('tab-pane');
+                tab.removeAttribute('style');
+                this.formTabsWrapper.appendChild(tab);
             });
         }
 
-        updateNav(){
-            this.nav.prev = ( this.current - 1 < 0 ) ? this.links.length - 1 : this.current - 1; 
-            this.nav.next = ( this.current + 1 < this.links.length ) ? this.current + 1  : 0;
+
+        collapseTabs() {
+            this.formTabs.forEach(tab => {
+                $(tab).collapse('hide');
+            });
+        }
+        
+        showTab() {
+            if (this.isMobile) {
+                this.collapseTabs();
+                $(this.formTabs[this.current]).collapse('show');
+            } else {
+                $(this.links[this.current]).tab('show');
+            }
+        }
+
+        showPrevious() {
+            if (this.isMobile) {
+                this.collapseTabs();
+                $(this.formTabs[--this.current]).collapse('show');
+            } else {
+                $(this.links[--this.current]).tab('show');
+            }
+        }
+
+        showNext() {
+            if (this.isMobile) {
+                this.collapseTabs();
+                $(this.formTabs[++this.current]).collapse('show');
+            } else {
+                $(this.links[++this.current]).tab('show');
+            }
         }
 
         assignEvents() {
             this.prevButton.addEventListener('click', () => {
-                if (mobileViewport.matches) {
-                    this.collapseTabs()
-                    $(this.tabContents[this.nav.prev]).collapse('show');
+                if (this.current === 0) {
+                   alert("Powrót");
                 } else {
-                    $(this.links[this.nav.prev]).tab('show');
+                    this.showPrevious();
                 }
-                
-                this.current = this.nav.prev;
-                this.updateNav();
             });
             this.nextButton.addEventListener('click', () => {
-                if (mobileViewport.matches) {
-                    this.collapseTabs()
-                    $(this.tabContents[this.nav.next]).collapse('show');
+                if (this.current === this.stepsNumber - 1) {
+                    alert("Wysyłanie formularza")
                 } else {
-                    $(this.links[this.nav.next]).tab('show');
+                    this.showNext();
                 }
-               
-                this.current = this.nav.next;
-                this.updateNav();
+                
+            });
+            this.mobileViewport.addListener((e) => {
+                this.isMobile = e.matches;
+                if (this.isMobile) {
+                    this.updateMobileView();
+                } else {
+                    this.updateDesktopView();
+                }
+                this.showTab();
             });
         }
     }
@@ -929,15 +906,7 @@
         }
     });
     
-
-    if (mobileViewport.matches) {
-        updateMobileView();
-    }
-
-
     new multiStepForm(document.querySelector('.cart-form'));
-
-    
 
 })();
 </script> 
