@@ -1,0 +1,232 @@
+//  .modal-backdrop.fade.in {
+//      background-color:#000;
+//  }
+
+
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and stuff
+
+
+.modal-open {
+    overflow: hidden;
+
+    .amr-modal {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+  
+.amr-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+  
+.amr-modal-dialog {
+    position: relative;
+    width: auto;
+    margin: .5rem;
+    pointer-events: none;
+    .amr-modal.fade & {
+        transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+        transform: translate(0,-50px);
+    }
+    .amr-modal.in & {
+        transform: none;
+    }
+}
+  
+//   .modal-dialog-scrollable {
+//     display: flex; // IE10/11
+//     max-height: calc(100% - #{$modal-dialog-margin * 2});
+  
+//     .modal-content {
+//       max-height: calc(100vh - #{$modal-dialog-margin * 2}); // IE10/11
+//       overflow: hidden;
+//     }
+  
+//     .modal-header,
+//     .modal-footer {
+//       flex-shrink: 0;
+//     }
+  
+//     .modal-body {
+//       overflow-y: auto;
+//     }
+//   }
+  
+  .amr-modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+  
+    // Ensure `modal-dialog-centered` extends the full height of the view (IE10/11)
+    &::before {
+      display: block; // IE10
+      height: calc(100vh - 1rem);
+      content: "";
+    }
+  
+    // Ensure `.modal-body` shows scrollbar (IE10/11)
+    &.amr-modal-dialog-scrollable {
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+  
+      .amr-modal-content {
+        max-height: none;
+      }
+  
+      &::before {
+        content: none;
+      }
+    }
+  }
+  
+  // Actual modal
+  .amr-modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%; // Ensure `.modal-content` extends the full width of the parent `.modal-dialog`
+    // counteract the pointer-events: none; in the .modal-dialog
+    color: $body-color;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: none;
+    border-radius:0;
+    box-shadow:none;
+    // Remove focus outline from opened modal
+    outline: 0;
+  }
+  
+  // Modal background
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+  
+    // Fade for backdrop
+    &.fade { opacity: 0; }
+    &.in { opacity: .5; background-color:#000; }
+  }
+  
+  // Modal header
+  // Top section of the modal w/ title and dismiss
+  .amr-modal-header {
+    display: flex;
+    align-items: flex-start; // so the close btn always stays on the upper right corner
+    justify-content: center; // Put modal header elements (title and dismiss) on opposite ends
+    padding: 35px 15px 0px;
+  
+    .close {
+        padding: 1rem 1rem;
+        margin: -1rem -1rem -1rem auto;
+    }
+  }
+  
+  // Title text within header
+  .amr-modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    text-align: center;
+    h2 {
+        margin-bottom:5px;
+    }
+  }
+  
+  // Modal body
+  // Where all modal content resides (sibling of .modal-header and .modal-footer)
+  .amr-modal-body {
+    position: relative;
+    // Enable `flex-grow: 1` so that the body take up as much space as possible
+    // when there should be a fixed height on `.modal-dialog`.
+    flex: 1 1 auto;
+    padding: 30px 20px;
+  }
+  
+  // Footer (for actions)
+  .amr-modal-footer {
+    display: flex;
+    align-items: center; // vertically center
+    justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
+    padding: 0 20px 30px;
+  
+    // Easily place margin between footer elements
+    > :not(:first-child) { margin-left: .25rem; }
+    > :not(:last-child) { margin-right: .25rem; }
+  }
+  
+  // Measure scrollbar width for padding body during modal show/hide
+  .modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+  }
+  
+  // Scale up the modal
+  @media (min-width:576px) {
+    // Automatically set modal's width for larger viewports
+    .amr-modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+  
+    .amr-modal-dialog-scrollable {
+        max-height: calc(100% - 3.5rem);
+  
+      .amr-modal-content {
+        max-height: calc(100vh - 3.5rem);
+      }
+    }
+  
+    .amr-modal-dialog-centered {
+        min-height: calc(100% - 3.5rem);
+  
+      &::before {
+        height: calc(100vh - 3.5rem);
+      }
+    }
+    
+    .amr-modal-body {
+      padding: 30px 50px;
+    }
+
+    .amr-modal-footer {
+      padding: 0 50px 30px;
+    }
+
+    .amr-modal-sm { max-width: 300px; }
+  }
+  
+  @media (min-width:992px) {
+    .amr-modal-lg,
+    .amr-modal-xl {
+      max-width: 800px;
+    }
+  }
+
+  @media (min-width:768px) {
+    .amr-modal-dialog {
+      max-width:590px;
+    }
+  }
+  @media (min-width:1200px) {
+    .amr-modal-xl { max-width: 1140px; }
+  }

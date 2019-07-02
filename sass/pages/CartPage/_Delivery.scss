@@ -1,0 +1,7 @@
+@include media-breakpoint-up(sm) {
+    #inpostModal, #localPickupModal {
+        .col-form-label {
+            text-align:right;
+        }
+    }
+}

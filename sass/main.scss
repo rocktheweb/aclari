@@ -1,0 +1,24 @@
+@import 'abstracts/variables';
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: $font-family-base;
+    background-color:#F5F7F7;
+}
+
+
+
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+
+@import 'components/Alert';
+@import 'components/Button';
+@import 'components/Forms';
+@import 'components/MiniCart';
+@import 'components/Modal';
+
+@import 'layouts/grid';
+
+@import 'pages/CartPage';

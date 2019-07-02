@@ -1,0 +1,220 @@
+.order-review-content {
+    padding:35px 15px;
+    background-color:$white;
+    .heading {
+        text-align:center;
+    }
+}
+.cart-items-list {
+    list-style: none;
+    padding-left:0;
+    margin:0;
+}
+.cart-item {
+    display:grid;
+    grid-template-columns: 110px 1fr auto;
+    grid-template-rows: repeat(5,auto);
+    grid-gap: 0px 30px;
+    align-items:center;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-bottom:1px solid #E4E4E4;
+    &__thumbnail {
+        grid-column: 1;
+        grid-row: 1 / -1;
+        img {
+            display:block;
+            max-width:100%;
+            height:auto;
+        }
+    }
+    &__info {
+        grid-column:2;
+        grid-row:1;
+    }
+    &__name {
+        font-family: $font-family-base;
+        font-size:14px;
+        line-height:1.4;
+        color:$body-color;
+        text-transform: none;
+        text-align:left;
+        margin:0 0 .5rem;
+    }
+    &__model {
+        font-size:10px;
+        color:$gray;
+    }
+    &__quantity {
+        grid-column: 2;
+        grid-row: 2;
+        &__text {
+            display:inline-block;
+            font-size:10px;
+            color:$gray;
+            margin-right:10px;
+        }
+        &__value {
+            font-size:12px;
+            padding:2px 8px;
+            border:1px solid #F5F5F5;
+        }
+    }
+    &__price {
+        @extend .mini-cart-item__price;
+        grid-column: 2;
+        grid-row: 3;
+        display:flex;
+        align-items: flex-end;
+        width:150px;
+        > .amount {
+            flex:1;
+            text-align:right;
+        }
+    }
+    &__details, &__variants {
+        font-size:12px;
+        display:flex;
+        flex-flow:row wrap;
+        padding-left:0;
+        margin-top:15px;
+        margin-bottom:0;
+        list-style:none;
+        span {
+            display:inline-block;
+            font-size:.833333em;
+            color:$gray;
+            margin-right:10px;
+        }
+    }
+    &__variants {
+        grid-column: 1 / -1;
+        justify-content:space-between;
+    }
+    &__details {
+        grid-column: 1 / -1;
+        li:not(:last-child) {
+            margin-right:20px;
+        }
+    }
+    
+    &__remove {
+        grid-row:3;
+        //align-self:end;
+        font-size:10px;
+        color:$gray;
+        text-align:center;
+        &::before {
+            content:'';
+            display:block;
+            background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTIiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxMiAxMyI+DQogIDxkZWZzPg0KICAgIDxjbGlwUGF0aCBpZD0iY2xpcC1wYXRoIj4NCiAgICAgIDxyZWN0IHdpZHRoPSIxMiIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIvPg0KICAgIDwvY2xpcFBhdGg+DQogIDwvZGVmcz4NCiAgPGcgaWQ9Im5vdW5fYmluXzEzOTgyOTUiIGNsaXAtcGF0aD0idXJsKCNjbGlwLXBhdGgpIj4NCiAgICA8cGF0aCBpZD0iUGF0aF8xIiBkYXRhLW5hbWU9IlBhdGggMSIgZD0iTTI5LjgzNCwzMC43NjhWMjQuNTVhLjQzMS40MzEsMCwxLDEsLjg2MiwwdjYuMjRhLjQzMy40MzMsMCwwLDEtLjQzMS40MzNBLjQ1My40NTMsMCwwLDEsMjkuODM0LDMwLjc2OFptLTMuODc4LjQzM2EuNDMzLjQzMywwLDAsMCwuNDMxLS40MzNWMjQuNTVhLjQzMS40MzEsMCwxLDAtLjg2MiwwdjYuMjRBLjQyOS40MjksMCwwLDAsMjUuOTU2LDMxLjJaTTM0LjEsMjIuNTU3YS40MzMuNDMzLDAsMCwxLS40MzEuNDMzaC0uNDUybC0uNzExLDkuNmEuNDQ1LjQ0NSwwLDAsMS0uNDMxLjQxMmgtNy45NWEuNDQ0LjQ0NCwwLDAsMS0uNDMxLS40MTJsLS43MTEtOS42aC0uNDUyYS40MzMuNDMzLDAsMCwxLDAtLjg2N2gyLjk5NXYtMS42OUEuNDMzLjQzMywwLDAsMSwyNS45NTYsMjBoNC4zMDlhLjQzMy40MzMsMCwwLDEsLjQzMS40MzN2MS42OWgyLjk3M0EuNDMzLjQzMywwLDAsMSwzNC4xLDIyLjU1N1ptLTcuNzEzLS40MzNoMy40NDdWMjAuODY3SDI2LjM4N1ptNS45NjguODY3SDIzLjg2N2wuNjY4LDkuMTQzaDcuMTUzWk0yOC4xMTEsMzEuMmEuNDMzLjQzMywwLDAsMCwuNDMxLS40MzNWMjQuNTVhLjQzMS40MzEsMCwxLDAtLjg2MiwwdjYuMjRBLjQyOS40MjksMCwwLDAsMjguMTExLDMxLjJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjIuMSAtMjApIiBmaWxsPSIjNzA3MDcwIi8+DQogIDwvZz4NCjwvc3ZnPg0K');
+            width:12px;
+            height:13px;
+            margin-right:auto;
+            margin-left:auto;
+        }
+    }
+}
+
+
+
+.cart-totals-wrapper {
+    padding:20px 0px;
+    > .custom-checkbox {
+        margin-top:20px;
+    }
+}
+.cart-totals {
+    padding-left:140px;
+    padding-bottom:20px;
+    border-bottom:1px solid #E4E4E4;
+    &__shipping, &__order {
+        @extend .mini-cart-item__price;
+        display:flex;
+        align-items: flex-end;
+        width:150px;
+        > .amount {
+            flex:1;
+            text-align: right;
+        }
+    }
+    &__shipping {
+        margin-bottom:.5rem;
+    }
+}
+
+
+fieldset#fieldset-consents {
+    margin-top:20px;
+}
+
+@include media-breakpoint-up(sm) {
+    .cart-item {
+        grid-template-columns: 110px 1fr auto 25px;
+        grid-template-rows: repeat(4, auto);
+        &__details {
+            grid-column:3;
+            grid-row: 1 / -1;
+            margin-top:0px;
+        }
+        &__variants {
+            justify-content: flex-start;
+            li:not(:last-child) {
+                margin-right:30px;
+            }
+        }
+        &__remove {
+            grid-column:4;
+            grid-row:1 / -1;
+            align-self: center;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+
+    .order-review-content {
+        padding:35px;
+    }
+    .cart-item {
+        grid-template-columns: 110px auto auto auto 150px 25px;
+        grid-template-rows: repeat(2, auto);
+        &__variants {
+            grid-column:2;
+            grid-row:2;
+            margin-top:0px;
+        }
+        &__details {
+            grid-column:3;
+            grid-row:1 / span 2;
+        }
+        &__quantity {
+            grid-column:4;
+            grid-row:1 / span 2;
+        }
+        &__price {
+            grid-column:5;
+            grid-row: 1 / span 2;
+        }
+        &__remove {
+            grid-column:6;
+        }
+    }
+    .cart-totals-wrapper {
+        display:flex;
+        align-items:flex-end;
+        justify-content: space-between;
+        border-bottom:1px solid #E4E4E4;
+        > .custom-checkbox {
+            order:1;
+        }
+        > .cart-totals {
+            order:2;
+        }
+    }
+    .cart-totals {
+        padding-bottom:0;
+        padding-left:0;
+        padding-right:55px;
+        border-bottom:none;
+    }
+}

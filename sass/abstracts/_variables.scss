@@ -1,0 +1,76 @@
+//Colors 
+
+$white: #fff;
+$primary:       #AFCCFF !default;
+$secondary:     #E4E4E4 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-800 !default;
+
+$black: #000;
+
+$theme-colors: () !default;
+
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    // "success":    $success,
+    // "info":       $info,
+    // "warning":    $warning,
+    // "danger":     $danger,
+    // "light":      $light,
+    // "dark":       $dark
+  ),
+  $theme-colors
+);
+
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold:  150 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:             $black !default;
+$yiq-text-light:            $white !default;
+
+
+
+$font-family-base: 'Roboto Condensed', sans-serif;
+$headings-font-family: 'Playfair Display', serif;
+
+$secondary:#AFCCFF;
+$gray:#707070;
+
+$body-color: #000000;
+
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+
+
+$btn-padding-y: 9px !default;
+$btn-padding-x: 42px !default;
+$btn-font-size: 12px !default;
+$btn-line-height: 1.5 !default;
+
+$btn-padding-y-lg: 14px !default;
+$btn-padding-x-lg: 50px !default;
+$btn-font-size-lg: 14px !default;
+$btn-line-height-lg: 1.5 !default;

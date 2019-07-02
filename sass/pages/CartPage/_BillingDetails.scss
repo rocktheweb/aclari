@@ -1,0 +1,47 @@
+.billing-details-wrapper {
+    padding:35px 15px 35px;
+    background-color:$white;
+    // > div {
+    //     margin-bottom:35px;
+    // }
+}
+
+#fieldset-customer {
+    .btn-login-wrapper {
+        span {
+            display: inline-block;
+            margin-right:10px;
+        }
+    }
+}
+
+#fieldset-invoice {
+    .amr-btn {
+        white-space: nowrap;
+        padding:14px 0px;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .billing-details-wrapper {
+        padding:35px 50px 35px;
+    }
+    #fieldset-customer {
+        .btn-login-wrapper {
+            text-align:right;
+        }
+    } 
+}
+
+@include media-breakpoint-up(lg) {
+    .billing-details-wrapper {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 50px;
+    }
+    #fieldset-customer, #fieldset-invoice {
+        .col-form-label {
+            text-align:right;
+        }
+    }
+}

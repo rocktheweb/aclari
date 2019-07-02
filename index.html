@@ -1,0 +1,945 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pierścionki zaręczynowe z brylantami, diamentami - Aclari - Aclari</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto+Condensed:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://aclari.pl/assets/css/aimor.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body> 
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" id="hamburger" data-target=".amr-navbar-main">
+                    <span class="sr-only">Pokaż nawigację</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="pull-right visible-xs" style="font-size:20px;">
+                    <a class="navbar-link" href="/account/profile">
+                        <span class="glyphicon glyphicon-user"></span>
+                    </a>
+                    <a class="navbar-link amr-navbar-cart-toggle" href="/cart">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                    </a> 
+                </span> 
+                <span class="pull-left"> 
+                    <a id="salonyPH" class="navbar-link" style="cursor:pointer">
+                        <span class="glyphicon glyphicon-map-marker"></span>
+                        <span class="hidden-xs-inline">Nasze Salony<b class="caret"></b></span>
+                    </a> 
+                    <a id="telPh" class="navbar-link" href="tel:89 533 42 09">
+                        <span class="glyphicon glyphicon-earphone"></span>
+                        <span class="hidden-xs-inline"> 89 533 42 09</span>
+                    </a> 
+                    <a id="emailPH" class="navbar-link" href="mailto:kontakt@aclari.pl">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        <span style="text-transform:lowercase!important;" class="hidden-xs-inline">kontakt@aclari.pl</span>
+                    </a> 
+                </span> 
+            </div>
+            <div class="collapse navbar-collapse amr-navbar-main" id="hamburgerDropdown"> 
+                <ul class="nav navbar-nav navbar-right"> 
+                    <li class="dropdown visible-xs">
+                        <a href="/pierscionki-zareczyny/">Pierścionki zaręczynowe</a> 
+                    </li> 
+                    <li class="dropdown visible-xs">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Biżuteria<b class="caret"></b></a> 
+                        <ul class="dropdown-menu"> 
+                            <li><a href="/pierscionki-zareczyny/">Pierścionki zaręczynowe</a></li> 
+                            <li><a href="/kolczyki/">Kolczyki</a></li> 
+                            <li><a href="/zawieszki/">Zawieszki</a></li> 
+                            <li><a href="/kolekcje">Kolekcje</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown visible-xs">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Salony<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/salon-katowice.html">Katowice</a></li>
+                            <li> <a href="/salon-krakow.html">Kraków </a></li>
+                            <li> <a href="/salon-poznan.html">Poznań</a></li>
+                            <li> <a href="/salon-sopot.html">Sopot</a></li>
+                            <li> <a href="/salon-wroclaw.html">Wrocław</a></li>
+                            <li> <a href="/salon-warszawa.html">Warszawa</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown visible-xs">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Strefa klienta<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/korekta-rozmiaru-pierscionka">Korekta rozmiaru pierścionka</a></li>
+                            <li><a href="/strona/gwarancja,17.html">Gwarancja</a></li>
+                            <li><a href="/reklamacja">Reklamacja</a></li>
+                            <li><a href="/darmowy-zwrot">Bezpłatny zwrot</a></li>
+                            <li><a href="/index/wrz-stan-realizacji-zamowienia">Sprawdź stan realizacji zamówienia</a></li>
+                            <li><a href="/strona/pytania-i-odpowiedzi,3.html">Pytania i odpowiedzi</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown visible-xs">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Poradnik<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/strona/okresl-rozmiar-pierscionka,11.html">Określ rozmiar pierścionka</a></li>
+                            <li><a href="/strona/4c,20.html">Parametry Diamentów</a></li>
+                            <li><a href="/strona/korzysci-z-zakupow-w-aclari,5.html">Korzyści z zakupów w ACLARI</a></li>
+                            <li><a href="/strona/na-ktorej-rece,25.html">Na której ręce</a></li>
+                            <li><a href="/poradnik">Więcej</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown hidden-xs" id="mini-cart" data-ng-controller="minicartController">
+                        <a href="/cart" class="dropdown-toggle" data-toggle="dropdown"> Koszyk<b class="caret"></b> </a>
+                        <div class="dropdown-menu">
+                            <div class="mini-cart">
+                                <div class="mini-cart-list-wrapper">
+                                    <div class="mini-cart-list"> 
+                                        <h3 class="mini-cart-list__heading">
+                                            <a href="#">Koszyk<span class="mini-cart-list__count">(3)</span></a>
+                                        </h3>    
+                                        <div class="mini-cart-item"> 
+                                            <a href="#" class="mini-cart-item__thumbnail">
+                                                <span class="mini-cart-item__quickview"></span>
+                                                <img src="src/img/pierscionek-zareczynowy-z-brylantami-aclari-kartezja-0,70ct-p0170tb-6444.jpg" class="img-responsive" alt="Pierścionek zaręczynowy Kartezja 0,70ct P0170TB" title="Pierścionek zaręczynowy Kartezja 0,70ct P0170TB">
+                                            </a> 
+                                            <div class="mini-cart-item__info">
+                                                <h3 class="mini-cart-item__name">Pierścionek zaręczynowy z brylantem z białego złota</h3>
+                                                <span class="mini-cart-item__model">P0170TB</span>
+                                                <ul class="mini-cart-item__details">
+                                                    <li><span>rozm.:</span>22</li>
+                                                    <li><span>masa:</span>0.19 ct</li>
+                                                    <li><span>ilość:</span>2</li>
+                                                </ul>
+                                            </div>
+                                            <div class="mini-cart-item__footer">
+                                                <a href="#" class="mini-cart-item__remove">usuń produkt</a>
+                                                <div class="mini-cart-item__price">
+                                                    <span class="text">cena:</span>
+                                                    <span class="amount">19 999 <small>PLN</small></span>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="mini-cart-item"> 
+                                            <a href="#" class="mini-cart-item__thumbnail">
+                                                <span class="mini-cart-item__quickview"></span>
+                                                <img src="src/img/pierscionek-zareczynowy-z-brylantami-aclari-kartezja-0,70ct-p0170tb-6444.jpg" class="img-responsive" alt="Pierścionek zaręczynowy Kartezja 0,70ct P0170TB" title="Pierścionek zaręczynowy Kartezja 0,70ct P0170TB">
+                                            </a> 
+                                            <div class="mini-cart-item__info">
+                                                <h3 class="mini-cart-item__name">Pierścionek zaręczynowy z brylantem z białego złota</h3>
+                                                <span class="mini-cart-item__model">P0170TB</span>
+                                                <ul class="mini-cart-item__details">
+                                                    <li><span>rozm.:</span>22</li>
+                                                    <li><span>masa:</span>0.19 ct</li>
+                                                    <li><span>ilość:</span>2</li>
+                                                </ul>
+                                            </div>
+                                            <div class="mini-cart-item__footer">
+                                                <a href="#" class="mini-cart-item__remove">usuń produkt</a>
+                                                <div class="mini-cart-item__price">
+                                                    <span class="text">cena:</span>
+                                                    <span class="amount">19 999 <small>PLN</small></span>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="mini-cart-item"> 
+                                            <a href="#" class="mini-cart-item__thumbnail">
+                                                <span class="mini-cart-item__quickview"></span>
+                                                <img src="src/img/pierscionek-zareczynowy-z-brylantami-aclari-kartezja-0,70ct-p0170tb-6444.jpg" class="img-responsive" alt="Pierścionek zaręczynowy Kartezja 0,70ct P0170TB" title="Pierścionek zaręczynowy Kartezja 0,70ct P0170TB">
+                                            </a> 
+                                            <div class="mini-cart-item__info">
+                                                <h3 class="mini-cart-item__name">Pierścionek zaręczynowy z brylantem z białego złota</h3>
+                                                <span class="mini-cart-item__model">P0170TB</span>
+                                                <ul class="mini-cart-item__details">
+                                                    <li><span>rozm.:</span>22</li>
+                                                    <li><span>masa:</span>0.19 ct</li>
+                                                    <li><span>ilość:</span>2</li>
+                                                </ul>
+                                            </div>
+                                            <div class="mini-cart-item__footer">
+                                                <a href="#" class="mini-cart-item__remove">usuń produkt</a>
+                                                <div class="mini-cart-item__price">
+                                                    <span class="text">cena:</span>
+                                                    <span class="amount">19 999 <small>PLN</small></span>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="mini-cart-total">
+                                    <a href="#" class="btn btn-secondary">Przejdź do kasy</a>
+                                    <div class="mini-cart-total__price">
+                                        <span class="text">cena:</span>
+                                        <span class="amount">19 999 <small>PLN</small></span>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div> 
+                    </li> 
+                    <li class="dropdown hidden-xs small-user-icon-menu"> 
+                        <a href="/account" class="dropdown-toggle" data-toggle="dropdown" data-target="#mnu-account"> 
+                            <span class="glyphicon glyphicon-user"></span> Konto<b class="caret"></b> 
+                        </a> 
+                    </li> 
+                </ul> 
+            </div> 
+        </div> 
+        <div class="dropdown" id="salon-list"> 
+            <div class="container"> 
+                <div class="pull-left salon-list-box"> 
+                    <h5>Wybierz Salon</h5> 
+                    <ul> 
+                        <li><a href="/salon-katowice.html">Salon Katowice</a></li> 
+                        <li><a href="/salon-krakow.html">Salon Kraków</a></li>
+                        <li><a href="/salon-poznan.html">Salon Poznań</a></li>
+                        <li><a href="/salon-sopot.html">Salon Sopot</a></li>
+                        <li><a href="/salon-wroclaw.html">Salon Wrocław</a></li>
+                        <li><a href=" /salon-warszawa.html">Salon Warszawa</a></li>
+                    </ul> 
+                </div> 
+            </div> 
+        </div> 
+        <div class="dropdown" id="mnu-account">
+            <div class="dropdown-content"> 
+                <div class="close-register-menu"></div>
+                <div id="inner-register-content"> 
+                    <div class="col-sm-12" style="margin-top: 20px;"> 
+                        <div class="col-sm-6"> 
+                            <form id="account" name="account" enctype="application/x-www-form-urlencoded" action="https://aclari.pl/account/login" method="post" class="form-horizontal">
+                                <fieldset id="fieldset-account" class="form-horizontal">
+                                    <legend>Mam już konto</legend>
+                                    <p class="help-block">Jeśli posiadasz już konto ACLARI® podaj e-mail i hasło w celu zalogowania.</p>
+                                    <div class="form-group">
+                                        <div class="col-sm-12 ">
+                                            <input type="text" name="login[email]" id="login-email" value="" class="form-control" placeholder="E-mail" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12 ">
+                                            <input type="password" name="login[pass]" id="login-pass" value="" class="form-control" placeholder="Hasło" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button name="login[login]" id="login-login" type="submit" value="login" class="btn btn-block btn-primary">Zaloguj się</button>
+                                        </div>
+                                        <div class="col-sm-3"></div>
+                                    </div>
+                                </fieldset>
+                            </form> 
+                        </div> 
+                        <div class="col-sm-6"> 
+                            <form class="form-horizontal" role="form" action="/account/register"> 
+                                <fieldset> 
+                                    <legend>Nie mam jeszcze konta</legend> 
+                                    <span class="help-block">Stwórz konto ACLARI®, aby zyskać dodatkowe korzyści. </span> 
+                                    <div class="form-group"> <div class="col-sm-12"> 
+                                        <button type="submit" class="btn btn-block btn-primary">Zarejestruj się</button> 
+                                    </div> 
+                                </div> 
+                            </fieldset> 
+                        </form> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+</nav>
+
+
+
+
+<div class="container">
+    <div class="cart-page">
+        <form action="/cart/step2" method="post" class="cart-form" name="basketorder" id="basketorder" ng-controller="checkoutBasketOrderController">
+            <!-- Nav tabs -->
+            <nav class="cart-page-navbar">
+                <ul class="cart-page-nav">
+                    <li class="cart-page-nav__item">
+                        <a class="cart-page-nav__link" data-target="#delivery">    
+                            <div class="text-wrapper">
+                                <div class="text">
+                                    <h2 class="heading">Dostawa i płatność</h2>
+                                    <span>Wybierz rodzaj dostawy i sposób płatności</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cart-page-nav__item">
+                        <a class="cart-page-nav__link" data-target="#billing-details">
+                            <div class="text-wrapper">
+                                <div class="text">
+                                    <h2 class="heading">Dane adresata</h2>
+                                    <span>Zaloguj się lub podaj dane osobowe</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cart-page-nav__item">
+                        <a class="cart-page-nav__link" data-target="#order-review">
+                            <div class="text-wrapper">
+                                <div class="text">
+                                    <h2 class="heading">Podsumowanie</h2>
+                                    <span>Sprawdź dokładnie swoje zamówienie</span>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+
+            <!-- Tab panes -->
+            <div class="cart-page-content tab-content">
+                <div class="tab-pane" id="delivery">
+                    <div class="billing-country-wrapper">
+                        <div class="amr-form-row">
+                            <div class="amr-col-lg text-center">
+                                <h2 class="heading">Wybierz kraj dostawy:</h2>
+                            </div>
+                            <div class="amr-col-lg text-center">
+                                <select name="basketorder[customer][kraj]" id="basketorder-customer-kraj" placeholder="Kraj" class="form-control"> 
+                                    <option value="AT">Austria</option> 
+                                    <option value="BE">Belgia</option> 
+                                    <option value="BG">Bułgaria</option> 
+                                    <option value="HR">Chorwacja</option> 
+                                    <option value="CY">Cypr</option> 
+                                    <option value="CZ">Czechy</option> 
+                                    <option value="DK">Dania</option> 
+                                    <option value="EE">Estonia</option> 
+                                    <option value="FI">Finlandia</option> 
+                                    <option value="FR">Francja</option> 
+                                    <option value="GR">Grecja</option> 
+                                    <option value="ES">Hiszpania</option> 
+                                    <option value="NL">Holandia</option> 
+                                    <option value="IE">Irlandia Republika</option> 
+                                    <option value="LT">Litwa</option> 
+                                    <option value="LU">Luksemburg</option> 
+                                    <option value="LV">Łotwa</option> 
+                                    <option value="MT">Malta</option> 
+                                    <option value="DE">Niemcy</option> 
+                                    <option value="PL" selected="selected">Polska</option> 
+                                    <option value="PT">Portugalia</option> 
+                                    <option value="RO">Rumunia</option> 
+                                    <option value="SK">Słowacja</option> 
+                                    <option value="SI">Słowenia</option> 
+                                    <option value="SE">Szwecja</option> 
+                                    <option value="HU">Węgry</option> 
+                                    <option value="GB">Wielka Brytania</option> 
+                                    <option value="IT">Włochy</option>
+                                </select>
+                            </div>
+                            <div class="amr-col-lg">
+                                <div class="alert alert-info">
+                                    Wybór kraju dostawy może spowodować zmianę rodzaju dostawy i sposobu płatności.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shipping">
+                        <h2 class="heading">Wybierz rodzaj Dostawy:</h2>
+                        <ul class="shipping-methods">
+                            <li class="shipping-method shipping-method--ups">
+                                <div class="shipping-method__logo">
+                                    <img src="img/ups-logo.png" alt="ups logo">
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" name="basketorder[delivery][dmethod]" id="basketorder-delivery-dmethod-1" value="1" checked>
+                                    <label class="custom-control-label" for="basketorder-delivery-dmethod-1">Przesyłka kurierska UPS</label>
+                                </div>
+                            </li>
+                            <li class="shipping-method shipping-method--inpost">
+                                <div class="shipping-method__logo">
+                                    <img src="img/inpost-logo.png" alt="inpost logo">
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" name="basketorder[delivery][dmethod]" id="basketorder-delivery-dmethod-2" value="2">
+                                    <label class="custom-control-label" for="basketorder-delivery-dmethod-2">Paczkomaty InPost</label>
+                                </div>
+                            </li>
+                            <li class="shipping-method shipping-method--pickup">
+                                <div class="shipping-method__logo">
+                                    <img src="img/aclari-logo.svg" alt="aclari logo">
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" name="basketorder[delivery][dmethod]" id="basketorder-delivery-dmethod-3" value="3">
+                                    <label class="custom-control-label" for="basketorder-delivery-dmethod-3">Odbiór osobisty</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- Modal -->
+                        <div class="amr-modal modal fade" id="inpostModal" tabindex="-1" role="dialog" aria-labelledby="inpostModalLabel" aria-hidden="true">
+                            <div class="amr-modal-dialog amr-modal-dialog-centered">
+                                <div class="amr-modal-content">
+                                    <div class="amr-modal-header">
+                                        <div class="amr-modal-title">
+                                            <h2 class="heading">Wybierz Paczkomat</h2>
+                                            <p>Wybierz Paczkomat, do którego zostanie dostarczona jest przesyłka.</p>
+                                        </div>
+                                    </div>
+                                    <div class="amr-modal-body">
+                                        <div class="amr-form-group amr-row">
+                                            <label for="staticEmail" class="amr-col-sm-4 col-form-label">Szczegóły<br>paczkomatu:*</label>
+                                            <div class="amr-col-sm-8">
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">Aleksandrów Łódzki Piłsudskiego 2/4</option>
+                                                    <option value="">Aleksandrów Łódzki Piłsudskiego 2/4</option>
+                                                    <option value="">Aleksandrów Łódzki Piłsudskiego 2/4</option>
+                                                    <option value="">Aleksandrów Łódzki Piłsudskiego 2/4</option>
+                                                    <option value="">Aleksandrów Łódzki Piłsudskiego 2/4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="amr-form-group amr-row">
+                                            <div class="amr-col-sm-8 amr-offset-sm-4">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" name="basketorder[inpost][chk_inpost_accept][]" id="basketorder-inpost-chk_inpost_accept-1" value="1">
+                                                    <label class="custom-control-label" for="basketorder-inpost-chk_inpost_accept-1">Zapoznałem się i akceptuję regulamin świadczenia usługi Paczkomaty 24/7 (wymagane, aby założyć konto)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="amr-modal-footer">
+                                        <button type="button" class="amr-btn amr-btn-secondary" data-dismiss="modal">Anuluj</button>
+                                        <button type="button" class="amr-btn amr-btn-primary">Wybierz</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="amr-modal modal fade" id="localPickupModal" tabindex="-1" role="dialog" aria-labelledby="localPickupModalLabel" aria-hidden="true">
+                            <div class="amr-modal-dialog amr-modal-dialog-centered">
+                                <div class="amr-modal-content">
+                                    <div class="amr-modal-header">
+                                        <div class="amr-modal-title">
+                                            <h2 class="heading">Wybierz salon Aclari</h2>
+                                            <p>Wybierz salon Aclari, do którego zostanie dostarczona przesyłka.</p>
+                                        </div>
+                                    </div>
+                                    <div class="amr-modal-body">
+                                        <div class="amr-form-group amr-row">
+                                            <label for="basketorder-pos-pos_id" class="amr-col-sm-4 col-form-label">Wybierz salon:*</label>
+                                            <div class="amr-col-sm-8">
+                                                <select name="basketorder[pos][pos_id]" id="basketorder-pos-pos_id" class="form-control">
+                                                    <option value="2">Poznań, ul. Półwiejska 42 lok. 346</option>
+                                                    <option value="3">Kraków, ul. Starowiślna 19</option>
+                                                    <option value="4">Sopot, ul. Grunwaldzka 44</option>
+                                                    <option value="5">Katowice, ul. Uniwersytecka 13</option>
+                                                    <option value="6">Wrocław, ul. Czysta 4</option>
+                                                    <option value="7">Warszawa, ul. Koszykowa 63</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="amr-form-group text-right">
+                                            <a class="amr-link-info" role="button">Dowiedz się więcej o Salonie</a>
+                                        </div>
+                                    </div>
+                                    <div class="amr-modal-footer">
+                                        <button type="button" class="amr-btn amr-btn-secondary" data-dismiss="modal">Anuluj</button>
+                                        <button type="button" class="amr-btn amr-btn-primary">Wybierz</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment">
+                        <h2 class="heading">Wybierz sposób Płatności:</h2>
+                        <ul class="payment-methods">
+                            <li class="payment-method">
+                                <div class="payment-method__logo">
+                                    <img src="img/bank-transfer-icon.svg" alt="płatność przelewem">
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" name="basketorder[payment][method]" id="basketorder-payment-method-1" value="1">
+                                    <label class="custom-control-label" for="basketorder-payment-method-1">Płatność przelewem lub kartą płatniczą</label>
+                                </div>
+                            </li>
+                            <li class="payment-method">
+                                <div class="payment-method__logo">
+                                    <img src="img/raty-payu-logo.jpg" alt="raty payU">
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" name="basketorder[payment][method]" id="basketorder-payment-method-4" value="4">
+                                    <label class="custom-control-label" for="basketorder-payment-method-4">Zakup na raty - Raty PayU</label>
+                                </div>
+                            </li>
+                            <li class="payment-method">
+                                <div class="payment-method__logo">
+                                    <img src="img/cash-on-delivery-icon.svg" alt="płatność przy odbiorze">
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" name="basketorder[payment][method]" id="basketorder-payment-method-2" value="2">
+                                    <label class="custom-control-label" for="basketorder-payment-method-2">Przy odbiorze UPS</label>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="tab-pane" id="billing-details">
+                    <div class="billing-details-wrapper">
+                        <div class="customer-details">
+                            <fieldset id="fieldset-customer">
+                                <div class="amr-form-group amr-form-row">
+                                    <div class="amr-col-12 btn-login-wrapper">
+                                        <span class="col-form-label">Jeżeli posiadasz już konto:</span>
+                                        <a href="#" class="amr-btn amr-btn-primary amr-btn-lg" role="button">Zaloguj się</a>
+                                    </div>
+                                </div>
+                                <div class="amr-form-group amr-form-row">
+                                    <label for="basketorder-customer-kraj" class="amr-col-sm-4 col-form-label">Kraj:*</label>
+                                    <div class="amr-col-sm-8">
+                                        <select name="basketorder[customer][kraj]" id="basketorder-customer-kraj" class="form-control">
+                                            <option value="AT">Austria</option> 
+                                            <option value="BE">Belgia</option> 
+                                            <option value="BG">Bułgaria</option> 
+                                            <option value="HR">Chorwacja</option> 
+                                            <option value="CY">Cypr</option> 
+                                            <option value="CZ">Czechy</option> 
+                                            <option value="DK">Dania</option> 
+                                            <option value="EE">Estonia</option> 
+                                            <option value="FI">Finlandia</option> 
+                                            <option value="FR">Francja</option> 
+                                            <option value="GR">Grecja</option> 
+                                            <option value="ES">Hiszpania</option> 
+                                            <option value="NL">Holandia</option> 
+                                            <option value="IE">Irlandia Republika</option> 
+                                            <option value="LT">Litwa</option> 
+                                            <option value="LU">Luksemburg</option> 
+                                            <option value="LV">Łotwa</option> 
+                                            <option value="MT">Malta</option> 
+                                            <option value="DE">Niemcy</option> 
+                                            <option value="PL" selected="selected">Polska</option> 
+                                            <option value="PT">Portugalia</option> 
+                                            <option value="RO">Rumunia</option> 
+                                            <option value="SK">Słowacja</option> 
+                                            <option value="SI">Słowenia</option> 
+                                            <option value="SE">Szwecja</option> 
+                                            <option value="HU">Węgry</option> 
+                                            <option value="GB">Wielka Brytania</option> 
+                                            <option value="IT">Włochy</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="amr-form-group amr-form-row">
+                                    <label for="basketorder-customer-imie" class="amr-col-sm-4 col-form-label">Imię i nazwisko*:</label>
+                                    <div class="amr-col-sm-8">
+                                        <input type="text" name="basketorder[customer][imie]" id="basketorder-customer-imie" class="form-control" placeholder="Wpisz swoje dane" required autocomplete="shipping name">
+                                    </div>
+                                </div>
+                                <div class="amr-form-group amr-form-row">
+                                    <label for="basketorder-customer-adres" class="amr-col-sm-4 col-form-label">Ulica*:</label>
+                                    <div class="amr-col-8 amr-col-sm-5">
+                                        <input type="text" name="basketorder[customer][adres]" id="basketorder-customer-adres" class="form-control" placeholder="Wpisz ulicę" required autocomplete="shipping address-line1">
+                                    </div>
+                                    <div class="amr-col-4 amr-col-sm-3">
+                                        <input type="text" name="basketorder[customer][numer]" id="basketorder-customer-numer" class="form-control" placeholder="Numer" required autocomplete="shipping address-line2">
+                                    </div>
+                                </div>
+                                <div class="amr-form-group amr-form-row">
+                                    <label for="basketorder-customer-kod_pocztowy" class="amr-col-sm-4 col-form-label">Kod pocztowy:</label>
+                                    <div class="amr-col-sm-8">
+                                        <input type="text" name="basketorder[customer][kod_pocztowy]" id="basketorder-customer-kod_pocztowy" class="form-control" placeholder="Kod pocztowy" required autocomplete="shipping postal-code">
+                                    </div>
+                                </div>
+                                <div class="amr-form-group amr-form-row">
+                                    <label for="basketorder-customer-miejscowosc" class="amr-col-sm-4 col-form-label">Miejscowość:</label>
+                                    <div class="amr-col-sm-8">
+                                        <input type="text" name="basketorder[customer][miejscowosc]" id="basketorder-customer-miejscowosc" class="form-control" placeholder="Miejscowość" required autocomplete="shipping address-level2">
+                                    </div>
+                                </div>
+                                <div class="amr-form-group amr-form-row">
+                                    <label for="basketorder-customer-komentarz" class="amr-col-sm-4 col-form-label">Komentarz:</label>
+                                    <div class="amr-col-sm-8">
+                                        <textarea type="text" name="basketorder[customer][komentarz]" id="basketorder-customer-komentarz" class="form-control" rows="3" placeholder="Tutaj wpisz treść komentarza"></textarea>
+                                    </div>
+                                </div>
+                                <div class="amr-form-group amr-form-row">
+                                    <label for="basketorder-customer-telefon" class="amr-col-sm-4 col-form-label">Numer telefonu*:</label>
+                                    <div class="amr-col-sm-8">
+                                        <input type="tel" name="basketorder[customer][telefon]" id="basketorder-customer-telefon" class="form-control" placeholder="Wpisz swój numer telefonu" required autocomplete="tel">
+                                    </div>
+                                </div>
+                                <div class="amr-form-group amr-form-row">
+                                    <label for="basketorder-customer-email" class="amr-col-sm-4 col-form-label">Adres e-mail*:</label>
+                                    <div class="amr-col-sm-8">
+                                        <input type="tel" name="basketorder[customer][email]" id="basketorder-customer-email" class="form-control" placeholder="Wpisz swój adres e-mail" required autocomplete="email">
+                                    </div>
+                                </div>
+                                <div class="amr-form-group amr-form-row">
+                                    <div class="amr-col-sm-8 amr-offset-sm-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="basketorder[create_account][]" id="basketorder-create_account-1" value="1">
+                                            <label class="custom-control-label col-form-label" for="basketorder-create_account-1">Chcę zarejestrować konto z tymi danymi</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="invoice-details">
+                            <div class="amr-form-group amr-form-row">
+                                <div class="amr-col-sm-8 amr-offset-sm-4">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="basketorder[settle_invoice][]" id="basketorder-settle_invoice-1" value="1">
+                                        <label class="custom-control-label col-form-label" for="basketorder-settle_invoice-1">Chcę otrzymać Fakturę VAT</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <fieldset id="fieldset-invoice" disabled>
+                                
+                                <div class="amr-form-group amr-form-row">
+                                    <label for="basketorder-invoice-f_nip" class="amr-col-sm-4 col-form-label">NIP:*:</label>
+                                    <div class="amr-col-8 amr-col-sm-5">
+                                        <input type="text" name="basketorder[invoice][f_nip]" id="basketorder-invoice-f_nip" class="amr-form-control" placeholder="Wpisz NIP">
+                                    </div>
+                                    <div class="amr-col-4 amr-col-sm-3">
+                                        <button type="button" class="amr-btn amr-btn-secondary amr-btn-lg amr-btn-block">Pobierz z GUS</button>
+                                    </div>
+                                </div>
+                                <div class="amr-form-group amr-form-row">
+                                    <label for="basketorder-invoice-f_nazwa" class="amr-col-sm-4 col-form-label">Nazwa firmy:*:</label>
+                                    <div class="amr-col-sm-8">
+                                        <input type="text" name="basketorder[invoice][f_nazwa]" id="basketorder-invoice-f_nazwa" class="amr-form-control" placeholder="Wpisz nazwę firmy">
+                                    </div>
+                                </div>
+                                <div class="amr-form-group amr-form-row">
+                                    <label for="basketorder-invoice-f_adres" class="amr-col-sm-4 col-form-label">Ulica:*:</label>
+                                    <div class="amr-col-8 amr-col-sm-5">
+                                        <input type="text" name="basketorder[invoice][f_adres]" id="basketorder-invoice-f_adres" class="amr-form-control" placeholder="Wpisz ulicę">
+                                    </div>
+                                    <div class="amr-col-4 amr-col-sm-3">
+                                        <input type="text" name="basketorder[invoice][f_adres]" id="basketorder[invoice][f_adres]" class="amr-form-control" placeholder="Numer">
+                                    </div>
+                                </div>
+                                <div class="amr-form-group amr-form-row">
+                                    <label for="basketorder-invoice-f_kod_pocztowy" class="amr-col-sm-4 col-form-label">Kod pocztowy:*:</label>
+                                    <div class="amr-col-sm-8">
+                                        <input type="text" name="basketorder[invoice][f_kod_pocztowy]" id="basketorder-invoice-f_kod_pocztowy" class="amr-form-control" placeholder="Wpisz kod pocztowy">
+                                    </div>
+                                </div>
+                                <div class="amr-form-group amr-form-row">
+                                    <label for="basketorder-invoice-f_miejscowosc" class="amr-col-sm-4 col-form-label">Miejscowość:*:</label>
+                                    <div class="amr-col-sm-8">
+                                        <input type="text" name="basketorder[invoice][f_miejscowosc]" id="basketorder-invoice-f_miejscowosc" class="amr-form-control" placeholder="Wpisz miasto">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div> 
+                </div>
+                <div class="tab-pane" id="order-review">
+                    <div class="order-review-content">
+                        <h2 class="heading">Produkty:</h2>
+                        <ul class="cart-items-list">
+                            <li class="cart-item">
+                                <div class="cart-item__thumbnail">
+                                    <a href="#">
+                                        <img src="src/img/pierscionek-zareczynowy-z-brylantami-aclari-kartezja-0,70ct-p0170tb-6444.jpg" alt="Pierścionek zaręczynowy Kartezja 0,70ct P0170TB">
+                                    </a>
+                                </div>
+                                <div class="cart-item__info">
+                                    <h2 class="cart-item__name">Pierścionek zaręczynowy<br>z brylantem z białego złota</h2>
+                                    <div class="cart-item__model"><span>model: </span>P0170TB</div>
+                                </div>
+                                <div class="cart-item__quantity">
+                                    <span class="cart-item__quantity__text">ilość:</span>
+                                    <span class="cart-item__quantity__value">1</span>
+                                </div>
+                                <div class="cart-item__price">
+                                    <span class="text">cena:</span>
+                                    <span class="amount">19 999 <small>PLN</small></span>
+                                </div>
+                                <a href="#" class="cart-item__remove">usuń</a>
+                                <ul class="cart-item__details">
+                                    <li><span>rozm.:</span>22</li>
+                                    <li><span>masa: </span>0,19 ct</li>
+                                </ul>
+                                <ul class="cart-item__variants">
+                                    <li><span>kolor:</span>J</li>
+                                    <li><span>czystość:</span>VS1</li>
+                                    <li><span>szlif:</span>EX</li>
+                                    <li><span>symetria:</span>EX</li>
+                                    <li><span>certyfikat</span>GIA</li>
+                                </ul>
+                            </li>
+                            <li class="cart-item">
+                                <div class="cart-item__thumbnail">
+                                    <a href="#">
+                                        <img src="src/img/pierscionek-zareczynowy-z-brylantami-aclari-kartezja-0,70ct-p0170tb-6444.jpg" alt="Pierścionek zaręczynowy Kartezja 0,70ct P0170TB">
+                                    </a>
+                                </div>
+                                <div class="cart-item__info">
+                                    <h2 class="cart-item__name">Pierścionek zaręczynowy<br>z brylantem z białego złota</h2>
+                                    <div class="cart-item__model"><span>model: </span>P0170TB</div>
+                                </div>
+                                <div class="cart-item__quantity">
+                                    <span class="cart-item__quantity__text">ilość:</span>
+                                    <span class="cart-item__quantity__value">1</span>
+                                </div>
+                                <div class="cart-item__price">
+                                    <span class="text">cena:</span>
+                                    <span class="amount">9 999 <small>PLN</small></span>
+                                </div>
+                                <a href="#" class="cart-item__remove">usuń</a>
+                                <ul class="cart-item__details">
+                                    <li><span>rozm.:</span>22</li>
+                                    <li><span>masa: </span>0,19 ct</li>
+                                </ul>
+                                <ul class="cart-item__variants">
+                                    <li><span>kolor:</span>J</li>
+                                    <li><span>czystość:</span>VS1</li>
+                                    <li><span>szlif:</span>EX</li>
+                                    <li><span>symetria:</span>EX</li>
+                                    <li><span>certyfikat</span>GIA</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="cart-totals-wrapper">  
+                            <div class="cart-totals">
+                                <div class="cart-totals__shipping">
+                                    <span class="text">wysyłka:</span>
+                                    <span class="amount">0 <small>PLN</small></span>
+                                </div>
+                                <div class="cart-totals__order">
+                                    <span class="text">suma:</span>
+                                    <span class="amount">26 543 <small>PLN</small></span>
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" name="checkAll" id="checkAll">
+                                <label class="custom-control-label" for="checkAll">Zaznacz wszystkie zgody</label>
+                            </div>
+                        </div>
+                        <fieldset id="fieldset-consents">
+                            <div class="amr-form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="basketorder[policies][aimor][]" id="basketorder-policies-aimor-1" value="1">
+                                    <label class="custom-control-label" for="basketorder-policies-aimor-1">Zapoznałem się i akceptuję warunki regulaminu ACLARI. <strong>(WYMAGANE)</strong></label>
+                                </div>
+                            </div>
+                            <div class="amr-form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="basketorder[policies][newsletter][]" id="basketorder-policies-newsletter-1" value="1">
+                                    <label class="custom-control-label" for="basketorder-policies-newsletter-1">Wyrażam zgodę na wykorzystanie i przetwarzanie moich danych osobowych w celu przekazania mojego adresu e-mail do OPINEO Sp. z.o.o. oraz przetwarzanie moich danych osobowych w celu wypełnienia ankiety oceny procesu składania zamówienia, ankiety oceny realizacji zamówienia oraz ankiety oceny produktu.</label>
+                                </div>
+                            </div>
+                            <div class="amr-form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="agreements[accountControllAgreement]" id="accountControllAgreement" value="yes">
+                                    <label class="custom-control-label" for="accountControllAgreement">Wyrażam zgodę na przetwarzanie moich danych osobowych przez ACLARI w celu założenia i utrzymywania mojego konta użytkownika. <strong>(WYMAGANE)</strong></label>
+                                </div>
+                            </div>
+                            <div class="amr-form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="agreements[rodoControllAgreement]" id="rodoControllAgreement" value="yes">
+                                    <label class="custom-control-label" for="rodoControllAgreement">Wyrażam zgodę na przetwarzanie moich danych osobowych w rozumieniu rozporządzenia RODO w celach marketingowych przez ACLARI.</label>
+                                </div>
+                            </div>
+                            <div class="amr-form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="agreements[promotionControllAgreement]" id="promotionControllAgreement" value="yes">
+                                    <label class="custom-control-label" for="promotionControllAgreement">Wyrażam zgodę na otrzymywanie drogą elektroniczną na wskazany przeze mnie adres e-mail informacji handlowej w rozumieniu art. 10 ustawy z dnia 18 lipca 2002 roku
+                                            o świadczeniu usług drogą elektroniczną od ACLARI.</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="cart-form-nav text-right">
+            <button id="cart-form-nav-prev" class="cart-form__previous amr-btn amr-btn-secondary amr-btn-lg">Wróć</button>
+            <a id="cart-form-nav-next" class="cart-form__next amr-btn amr-btn-primary amr-btn-lg" role="button">Dalej</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>   
+<script>
+(function(){
+    
+
+    let cartLinks = document.querySelectorAll('.cart-page-nav a');
+    let cartPageContent = document.querySelector('.cart-page-content');
+
+    let mobileViewport = window.matchMedia('(max-width: 991.98px)');
+    
+    mobileViewport.addListener(mobileViewportTest);
+    
+    function mobileViewportTest(e){
+        if (e.matches) {
+            updateMobileView();
+        } else {
+            updateDesktopView();
+            
+        }
+    }
+    
+    function handleCollapse(){
+
+        let target = this.getAttribute('data-target');
+
+        $(target).collapse('toggle');
+
+    }
+
+    function updateMobileView() {
+
+        cartLinks.forEach(function(item){
+
+            item.parentElement.classList.remove('active');
+            let cartContent = document.querySelector(item.getAttribute('data-target'));
+            cartContent.classList.remove('tab-pane', 'active');
+            cartContent.classList.add('collapse');
+            item.parentElement.appendChild(cartContent);
+            
+            //item.addEventListener('click', handleCollapse);
+
+        });
+        
+    }
+
+    function updateDesktopView() {
+
+        cartLinks.forEach(function(item){ 
+
+            item.parentElement.classList.remove('active');
+            //item.removeEventListener('click', handleCollapse);
+            let cartContent = document.querySelector(item.getAttribute('data-target'));
+            cartContent.classList.remove('collapse', 'in');
+            cartContent.classList.add('tab-pane');
+            cartContent.removeAttribute('style');
+            cartPageContent.appendChild(cartContent);
+
+        });
+
+        $(cartLinks[0]).tab('show');
+    }
+
+
+    
+    
+
+    class multiStepForm {
+        constructor(form) {
+            this.links = Array.from(form.querySelectorAll('.cart-page-navbar a'));
+            this.tabContents = [];
+
+            this.links.forEach((link) => {
+                let target = link.getAttribute('data-target');
+                this.tabContents.push(document.querySelector(target));
+            });
+            
+        
+            this.current = 0
+            this.nav = {
+                prev: null,
+                next:null
+            }
+            this.updateNav();
+
+            this.prevButton = document.getElementById('cart-form-nav-prev');
+            this.nextButton = document.getElementById('cart-form-nav-next');
+
+            this.assignEvents();
+            
+            if (mobileViewport.matches) {
+                $(this.tabContents[0]).collapse('show');
+            } else {
+                $(this.links[0]).tab('show');
+            }
+           
+        }
+        
+        collapseTabs(){
+            this.tabContents.forEach(tab => {
+                $(tab).collapse('hide');
+            });
+        }
+
+        updateNav(){
+            this.nav.prev = ( this.current - 1 < 0 ) ? this.links.length - 1 : this.current - 1; 
+            this.nav.next = ( this.current + 1 < this.links.length ) ? this.current + 1  : 0;
+        }
+
+        assignEvents() {
+            this.prevButton.addEventListener('click', () => {
+                if (mobileViewport.matches) {
+                    this.collapseTabs()
+                    $(this.tabContents[this.nav.prev]).collapse('show');
+                } else {
+                    $(this.links[this.nav.prev]).tab('show');
+                }
+                
+                this.current = this.nav.prev;
+                this.updateNav();
+            });
+            this.nextButton.addEventListener('click', () => {
+                if (mobileViewport.matches) {
+                    this.collapseTabs()
+                    $(this.tabContents[this.nav.next]).collapse('show');
+                } else {
+                    $(this.links[this.nav.next]).tab('show');
+                }
+               
+                this.current = this.nav.next;
+                this.updateNav();
+            });
+        }
+    }
+
+    $('input[name="basketorder[delivery][dmethod]"]').change(function(){
+       if($(this).val() === "2") {
+           $('#inpostModal').modal();
+       } else if ($(this).val() === "3") {
+            $('#localPickupModal').modal();
+       }
+    });
+
+    $('#basketorder-settle_invoice-1').change(function(){
+        var checked = $(this).prop('checked');
+        $('#fieldset-invoice').prop('disabled', !checked);
+    });
+    
+    let consents = $('#fieldset-consents input[type="checkbox"]');
+    let checkAllConsents = $('#checkAll');
+
+    consents.change(function(){
+        if ($(this).prop('checked') === false && checkAllConsents.prop('checked') === true) {
+            checkAllConsents.prop('checked', false);
+        }
+    });
+
+    $('#checkAll').change(function(){
+        var isChecked = $(this).prop('checked');
+        if (isChecked) {
+           consents.prop('checked', true);
+        }
+    });
+    
+
+    if (mobileViewport.matches) {
+        updateMobileView();
+    }
+
+
+    new multiStepForm(document.querySelector('.cart-form'));
+
+    
+
+})();
+</script> 
+</body>
+</html>

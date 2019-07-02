@@ -1,0 +1,94 @@
+.btn-secondary {
+    background-color:$secondary;
+}
+
+.amr-link-info {
+    &::before {
+        content:'';
+        display:inline-block;
+        width:24px;
+        height:24px;
+        margin-top:-3px;
+        margin-right:10px;
+        border-radius:50%;
+        background-image:url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOS45NzciIGhlaWdodD0iOS45OTIiIHZpZXdCb3g9IjAgMCA5Ljk3NyA5Ljk5MiI+DQogIDxkZWZzPg0KICAgIDxjbGlwUGF0aCBpZD0iY2xpcC1wYXRoIj4NCiAgICAgIDxyZWN0IHdpZHRoPSI5Ljk3NyIgaGVpZ2h0PSI5Ljk5MiIgZmlsbD0ibm9uZSIvPg0KICAgIDwvY2xpcFBhdGg+DQogIDwvZGVmcz4NCiAgPGcgaWQ9Im5vdW5fU2VhcmNoXzg3NTM1NyIgY2xpcC1wYXRoPSJ1cmwoI2NsaXAtcGF0aCkiPg0KICAgIDxwYXRoIGlkPSJQYXRoXzIiIGRhdGEtbmFtZT0iUGF0aCAyIiBkPSJNMzAuODQyLDMwLjEyNywyOC45OCwyOC4yODJhNC41LDQuNSwwLDAsMC0uMzMzLTUuOTY4LDQuNDg1LDQuNDg1LDAsMCwwLTYuMzM0LDYuMzUxQTQuNDgyLDQuNDgyLDAsMCwwLDI4LjI4MiwyOWwxLjg0NSwxLjg0NWEuNDc5LjQ3OSwwLDAsMCwuMzQ5LjE1LjQ1My40NTMsMCwwLDAsLjM0OS0uMTVBLjUxOC41MTgsMCwwLDAsMzAuODQyLDMwLjEyN1pNMjguOTgsMjUuNDg5YTMuNDE5LDMuNDE5LDAsMCwxLTEuMDMxLDIuNDYxLDMuNTE2LDMuNTE2LDAsMCwxLTIuNDYxLDEuMDMxLDMuNDE5LDMuNDE5LDAsMCwxLTIuNDYxLTEuMDMxQTMuNTE2LDMuNTE2LDAsMCwxLDIyLDI1LjQ4OWEzLjQxOSwzLjQxOSwwLDAsMSwxLjAzMS0yLjQ2MUEzLjQ4NywzLjQ4NywwLDAsMSwyNS40ODksMjJhMy40MTksMy40MTksMCwwLDEsMi40NjEsMS4wMzFBMy40ODcsMy40ODcsMCwwLDEsMjguOTgsMjUuNDg5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIxIC0yMSkiLz4NCiAgPC9nPg0KPC9zdmc+DQo=');
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-color:#F5F5F5;
+        vertical-align: middle;
+    }
+}
+
+
+.amr-btn {
+    display: inline-block;
+    font-family: $font-family-base;
+    font-weight: 400;
+    color: $body-color;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height);
+
+    &:hover {
+        color: $body-color;
+        text-decoration: none;
+    }
+  
+    // &:focus,
+    // &.focus {
+    //   outline: 0;
+    //   box-shadow: $btn-focus-box-shadow;
+    // }
+  
+    // &.disabled,
+    // &:disabled {
+    //   opacity: $btn-disabled-opacity;
+    //   @include box-shadow(none);
+    // }
+  
+    // &:not(:disabled):not(.disabled):active,
+    // &:not(:disabled):not(.disabled).active {
+    //   @include box-shadow($btn-active-box-shadow);
+  
+    //   &:focus {
+    //     @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    //   }
+    // }
+  }
+
+  //
+// Alternate buttons
+//
+
+@each $color, $value in $theme-colors {
+    .amr-btn-#{$color} {
+        @include button-variant($value, $value);
+    }
+}
+
+
+//
+// Button Sizes
+//
+
+.amr-btn-lg {
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg);
+}
+
+
+//
+// Block button
+//
+
+.amr-btn-block {
+    display: block;
+    width: 100%;
+
+    // Vertically space out multiple block buttons
+    + .amr-btn-block {
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,451 @@
+<div class="container">
+        <div id="shopping-page"> 
+            <form action="/cart/step2" method="post" class="form-horizontal" name="basketorder" id="basketorder" ng-controller="checkoutBasketOrderController"> 
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="col-md-12 center-content"> 
+                            <img class="zakupy-top-icon" src="/assets/img/zakupy-ico-1.png" alt=""/> 
+                            <h2>Dane Dostawy</h2> 
+                            <p class="sub-header">Podaj swoje dane osobowe.</p> 
+                        </div> 
+                        <div class="col-md-12"> 
+                            <fieldset id="fieldset-customer" ng-controller="checkoutCustomerController">
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <select name="basketorder[customer][kraj]" id="basketorder-customer-kraj" placeholder="Kraj" class="form-control"> 
+                                            <option value="AT">Austria</option> 
+                                            <option value="BE">Belgia</option> 
+                                            <option value="BG">Bułgaria</option> 
+                                            <option value="HR">Chorwacja</option> 
+                                            <option value="CY">Cypr</option> 
+                                            <option value="CZ">Czechy</option> 
+                                            <option value="DK">Dania</option> 
+                                            <option value="EE">Estonia</option> 
+                                            <option value="FI">Finlandia</option> 
+                                            <option value="FR">Francja</option> 
+                                            <option value="GR">Grecja</option> 
+                                            <option value="ES">Hiszpania</option> 
+                                            <option value="NL">Holandia</option> 
+                                            <option value="IE">Irlandia Republika</option> 
+                                            <option value="LT">Litwa</option> 
+                                            <option value="LU">Luksemburg</option> 
+                                            <option value="LV">Łotwa</option> 
+                                            <option value="MT">Malta</option> 
+                                            <option value="DE">Niemcy</option> 
+                                            <option value="PL" selected="selected">Polska</option> 
+                                            <option value="PT">Portugalia</option> 
+                                            <option value="RO">Rumunia</option> 
+                                            <option value="SK">Słowacja</option> 
+                                            <option value="SI">Słowenia</option> 
+                                            <option value="SE">Szwecja</option> 
+                                            <option value="HU">Węgry</option> 
+                                            <option value="GB">Wielka Brytania</option> 
+                                            <option value="IT">Włochy</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group amr-hidden">
+                                    <div class="col-sm-4">
+                                        <select name="basketorder[customer][region]" id="basketorder-customer-region" placeholder="Rejon" class="form-control" autocomplete="off"> </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-9">
+                                        <input type="text" name="basketorder[customer][imie]" id="basketorder-customer-imie" value="" placeholder="Imię" type="text" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-9">
+                                        <input type="text" name="basketorder[customer][nazwisko]" id="basketorder-customer-nazwisko" value="" placeholder="Nazwisko" type="text" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-9">
+                                        <input type="text" name="basketorder[customer][adres]" id="basketorder-customer-adres" value="" placeholder="Ulica, nr" type="text" class="form-control" maxlength="35" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 col-md-5">
+                                        <input type="text" name="basketorder[customer][kod_pocztowy]" id="basketorder-customer-kod_pocztowy" value="" placeholder="Kod pocztowy" type="tel" class="form-control col-xs-4" maxlength="10" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-9">
+                                        <input type="text" name="basketorder[customer][miejscowosc]" id="basketorder-customer-miejscowosc" value="" placeholder="Miejscowość" type="text" class="form-control" maxlength="35" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group hidden">
+                                    <label for="basketorder-customer-delivery_cost" class="col-sm-3 control-label optional">Koszt dostawy</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" name="basketorder[customer][delivery_cost]" id="basketorder-customer-delivery_cost" value="" class="form-control" readOnly="1" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-3 col-md-9">
+                                        <input type="text" name="basketorder[customer][telefon]" id="basketorder-customer-telefon" value="" ng-model="customer.telefon" placeholder="Nr telefonu" type="tel" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-9">
+                                        <input type="text" name="basketorder[customer][email]" id="basketorder-customer-email" value="" ng-model="customer.email" type="email" class="form-control" placeholder="Email" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-9">
+                                        <textarea name="basketorder[customer][komentarz]" id="basketorder-customer-komentarz" placeholder="Komentarz" rows="3" class="form-control" cols="80"></textarea>
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                            </fieldset> 
+                            <fieldset id="fieldset-newaccount" class="hidden">
+                                <div class="form-group">
+                                    <label for="basketorder-newaccount-pass" class="col-sm-3 control-label optional">Hasło</label>
+                                    <div class="col-sm-4">
+                                        <input type="password" name="basketorder[newaccount][pass]" id="basketorder-newaccount-pass" value="" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="basketorder-newaccount-repass" class="col-sm-3 control-label optional">Powtórz hasło</label>
+                                    <div class="col-sm-4">
+                                        <input type="password" name="basketorder[newaccount][repass]" id="basketorder-newaccount-repass" value="" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                            </fieldset>
+                            <div class="form-group">
+                                <div class="col-sm-8">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="basketorder[settle_invoice][]" id="basketorder-settle_invoice-1" value="1" elementBelongsTo="basketorder" />
+                                        Chcę otrzymać fakturę VAT
+                                    </label>
+                                </div>
+                            </div> 
+                            <fieldset id="fieldset-invoice" class="hidden">
+                                <div class="form-group">
+                                    <label for="basketorder-invoice-f_nazwa" class="col-sm-3 control-label optional">Nazwa firmy</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="basketorder[invoice][f_nazwa]" id="basketorder-invoice-f_nazwa" value="" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="basketorder-invoice-f_nip" class="col-sm-3 control-label optional">NIP</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="basketorder[invoice][f_nip]" id="basketorder-invoice-f_nip" value="" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="basketorder-invoice-f_adres" class="col-sm-3 control-label optional">Ulica, nr</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="basketorder[invoice][f_adres]" id="basketorder-invoice-f_adres" value="" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="basketorder-invoice-f_miejscowosc" class="col-sm-3 control-label optional">Miasto</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="basketorder[invoice][f_miejscowosc]" id="basketorder-invoice-f_miejscowosc" value="" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="basketorder-invoice-f_kod_pocztowy" class="col-sm-3 control-label optional">Kod pocztowy</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="basketorder[invoice][f_kod_pocztowy]" id="basketorder-invoice-f_kod_pocztowy" value="" class="form-control" maxlength="6" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                            </fieldset> 
+                            <div class="form-group">
+                                <div class="col-sm-8">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="basketorder[create_account][]" id="basketorder-create_account-1" value="1" elementBelongsTo="basketorder" />Chcę zarejestrować konto Aclari
+                                    </label>
+                                </div>
+                            </div> 
+                        </div> 
+                    </div> 
+                    <div class="col-md-4"> 
+                        <div class="col-md-12 center-content"> 
+                            <img class="zakupy-top-icon" src="/assets/img/zakupy-ico-2.png" alt=""/> 
+                            <h2>Dostawa i Płatność</h2> 
+                            <p class="sub-header">Wybierz sposób w jaki dostarczymy Twoje zamówienie.</p> 
+                        </div> 
+                        <div class="col-md-12"> 
+                            <fieldset id="fieldset-delivery">
+                                <legend>Dostawa</legend>
+                                <div class="form-group">
+                                    <div class="col-sm-11 col-sm-offset-1">
+                                        <label class="radio amr-radio">
+                                            <input type="radio" name="basketorder[delivery][dmethod]" id="basketorder-delivery-dmethod-1" value="1" checked="checked" />
+                                            <label for="basketorder-delivery-dmethod-1"><i></i>
+                                            </label> 
+                                            <label class="required" for="basketorder-delivery-dmethod-1"> 
+                                                <h5>Przesyłka kurierska UPS</h5> 
+                                            </label>
+                                        </label>
+                                        <label class="radio amr-radio">
+                                            <input type="radio" name="basketorder[delivery][dmethod]" id="basketorder-delivery-dmethod-4" value="4" />
+                                            <label for="basketorder-delivery-dmethod-4"><i></i></label>
+                                            <label class="required" for="basketorder-delivery-dmethod-4"> 
+                                                <h5>Przesyłka kurierska UPS Zagraniczna</h5> 
+                                            </label>
+                                        </label>
+                                        <label class="radio amr-radio">
+                                            <input type="radio" name="basketorder[delivery][dmethod]" id="basketorder-delivery-dmethod-2" value="2" disabled="disabled" />
+                                            <label for="basketorder-delivery-dmethod-2"><i></i></label>
+                                            <label class="required" for="basketorder-delivery-dmethod-2">
+                                                <h5>Paczkomaty InPost</h5>
+                                            </label>
+                                        </label>
+                                        <label class="radio amr-radio">
+                                            <input type="radio" name="basketorder[delivery][dmethod]" id="basketorder-delivery-dmethod-3" value="3" />
+                                            <label for="basketorder-delivery-dmethod-3"><i></i></label> 
+                                            <label class="required" for="basketorder-delivery-dmethod-3"> 
+                                                <h5>Odbiór osobisty</h5> 
+                                            </label>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                            </fieldset>
+                            <fieldset id="fieldset-pos" class="hidden" ng-controller="checkoutPosController">
+                                <legend>Wybór salonu Aclari</legend>
+                                <p class="help-block">Wybierz salon Aclari, do którego zostanie dostarczona przesyłka.</p>
+                                <div class="form-group">
+                                    <label for="basketorder-pos-pos_id" class="col-sm-3 control-label optional">Salon Aclari</label>
+                                    <div class="col-sm-9">
+                                        <select name="basketorder[pos][pos_id]" id="basketorder-pos-pos_id" class="form-control"> 
+                                            <option value="2">Poznań, ul. Półwiejska 42 lok. 346</option> 
+                                            <option value="3">Kraków, ul. Starowiślna 19</option> 
+                                            <option value="4">Sopot, ul. Grunwaldzka 44</option> 
+                                            <option value="5">Katowice, ul. Uniwersytecka 13</option> 
+                                            <option value="6">Wrocław, ul. Czysta 4</option> 
+                                            <option value="7">Warszawa, ul. Koszykowa 63</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-1 pos-details-container"></div>
+                                </div>
+                            </fieldset> 
+                            <fieldset id="fieldset-inpost" disabled="disabled" ng-controller="checkoutInpostController" class="hidden">
+                                <legend>Paczkomaty</legend>
+                                <p class="help-block" id="inpost-select2">Wybierz Paczkomat, do którego zostanie dostarczona przesyłka.</p>
+                                <div class="form-group">
+                                    <label for="basketorder-inpost-iemail" class="col-sm-3 control-label optional">Email</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" name="basketorder[inpost][iemail]" id="basketorder-inpost-iemail" value="" ng-model="customer.email" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="basketorder-inpost-itelefon" class="col-sm-3 control-label optional">Telefon komórkowy</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" name="basketorder[inpost][itelefon]" id="basketorder-inpost-itelefon" value="" ng-model="customer.telefon" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <div class="form-group inpost-paczkomat-primary">
+                                    <div class="col-sm-12">
+                                        <input type="text" name="basketorder[inpost][paczkomat_primary]" id="basketorder-inpost-paczkomat_primary" value="" class="form-control" registerInArrayValidator="" />
+                                    </div>
+                                    <div class="col-sm-3 btn-details-container"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class=" col-md-12 col-sm-8">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="basketorder[inpost][chk_inpost_accept][]" id="basketorder-inpost-chk_inpost_accept-1" value="1" />
+                                            <h5>Regulamin Paczkomaty 24/7</h5>
+                                            <p> Zapoznałem się i akceptuję <a target="blank" class="inpost-regulamin-href" href="#">regulamin świadczenia usługi Paczkomaty 24/7</a> (wymagane, aby założyć konto) <!-- Dane będą przetwarzane przez InPost Sp. z o.o. z siedzibą w Krakowie, ul. Malborska 130, w celu realizacji funkcjonalności serwisu i świadczenia usług przez InPost Sp. z o.o. Mają Państwo prawo dostępu do treści swoich danych oraz ich poprawiania. Podanie danych jest dobrowolne, ale niezbędne do korzystania z serwisu i usług InPost Sp. z o.o. --> 
+                                            </p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="basketorder[inpost][primary][name]" value="" id="basketorder-inpost-primary-name" />
+                                <input type="hidden" name="basketorder[inpost][primary][postcode]" value="" id="basketorder-inpost-primary-postcode" />
+                                <input type="hidden" name="basketorder[inpost][primary][street]" value="" id="basketorder-inpost-primary-street" />
+                                <input type="hidden" name="basketorder[inpost][primary][buildingnumber]" value="" id="basketorder-inpost-primary-buildingnumber" />
+                                <input type="hidden" name="basketorder[inpost][primary][town]" value="" id="basketorder-inpost-primary-town" />
+                                <input type="hidden" name="basketorder[inpost][primary][latitude]" value="" id="basketorder-inpost-primary-latitude" />
+                                <input type="hidden" name="basketorder[inpost][primary][longitude]" value="" id="basketorder-inpost-primary-longitude" />
+                                <input type="hidden" name="basketorder[inpost][primary][paymentavailable]" value="" id="basketorder-inpost-primary-paymentavailable" />
+                                <input type="hidden" name="basketorder[inpost][primary][operatinghours]" value="" id="basketorder-inpost-primary-operatinghours" />
+                                <input type="hidden" name="basketorder[inpost][primary][locationdescription]" value="" id="basketorder-inpost-primary-locationdescription" />
+                                <input type="hidden" name="basketorder[inpost][primary][paymentpointdescr]" value="" id="basketorder-inpost-primary-paymentpointdescr" />
+                                <input type="hidden" name="basketorder[inpost][primary][paymenttype]" value="" id="basketorder-inpost-primary-paymenttype" />
+                            </fieldset>
+                            <fieldset id="fieldset-payment">
+                                <legend>Płatność</legend>
+                                <div class="form-group">
+                                    <div class="col-sm-11 col-sm-offset-1">
+                                        <label class="radio amr-radio">
+                                            <input type="radio" name="basketorder[payment][method]" id="basketorder-payment-method-1" value="1" />
+                                            <label for="basketorder-payment-method-1"><i></i></label>
+                                            <label class="required" for="basketorder-payment-method-1">
+                                                <h5>Płatność przelewem lub kartą płatniczą</h5> 
+                                                <!-- <p> Dokonaj płatności on-line za pośrednictwem serwisu PayU<br/> <small>Koszt wysyłki 0zł</small> </p>-->
+                                            </label>
+                                        </label>
+                                        <label class="radio amr-radio">
+                                            <input type="radio" name="basketorder[payment][method]" id="basketorder-payment-method-4" value="4" />
+                                            <label for="basketorder-payment-method-4"><i></i></label>
+                                            <label class="required" for="basketorder-payment-method-4">
+                                                <h5>Zakup na raty - Raty PayU</h5>
+                                                <!-- <p> Dokonaj płatności korzystając z systemu ratalnego on-line PayU.<br/> <small>Koszt wysyłki 0zł</small> </p>-->
+                                            </label>
+                                        </label>
+                                        <label class="radio amr-radio">
+                                            <input type="radio" name="basketorder[payment][method]" id="basketorder-payment-method-2" value="2" />
+                                            <label for="basketorder-payment-method-2"><i></i></label> 
+                                            <label class="required" for="basketorder-payment-method-2"> 
+                                                <h5>Przy odbiorze UPS</h5> <!-- <p> Zapłać kurierowi UPS.<br/> <small>Koszt wysyłki 0zł</small> </p> --> 
+                                            </label>
+                                        </label>
+                                        <label class="radio amr-radio">
+                                            <input type="radio" name="basketorder[payment][method]" id="basketorder-payment-method-5" value="5" />
+                                            <label for="basketorder-payment-method-5"><i></i></label> 
+                                            <label class="required" for="basketorder-payment-method-5"> 
+                                                <h5>Płatność w Salonie</h5> <!-- <p> Zapłać przy odbiorze biżuterii w salonie.<br/> <small>Koszt wysyłki 0zł</small> </p> --> 
+                                            </label>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                            </fieldset> 
+                        </div> 
+                    </div> 
+                    <div class="col-md-4"> 
+                        <div class="col-md-12 center-content"> 
+                            <img class="zakupy-top-icon" src="/assets/img/zakupy-ico-3.png" alt=""/> 
+                            <h2>Twój Koszyk</h2> 
+                            <p class="sub-header">Dodane produkty.</p> 
+                        </div> 
+                        <div class="col-md-12"> 
+                            <fieldset id="fieldset-discount" ng-controller="checkUserCodeController">
+                                <legend>Kod promocyjny</legend>
+                                <p class="help-block">Użyj swojego kodu promocyjnego aby uzyskać zniżki na produkty Aimor</p>
+                                <div class="form-group">
+                                    <label for="basketorder-discount-discountCode" class="col-sm-4 control-label optional">Kod promocyjny</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="basketorder[discount][discountCode]" id="basketorder-discount-discountCode" value="" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-3"></div>
+                                </div>
+                                <dt id="basketorder-discount-discountId-label">&#160;</dt>
+                                <dd id="basketorder-discount-discountId-element">
+                                    <input type="hidden" name="basketorder[discount][discountId]" value="" id="basketorder-discount-discountId" />
+                                </dd>
+                            </fieldset> 
+                            <fieldset> 
+                                <div style="clear: both"></div> 
+                                <div id="my-main-basket" class="row"> 
+                                    <style> @media(max-width:475px){ .basket-padding{ padding:0px; } .fix-mobile-name{ margin-left:15px; } }</style>
+                                    <div class="row"> 
+                                        <div class="col-md-3 col-sm-3 col-xs-12 hidden-xs"> 
+                                            <img class="img-responsive"> 
+                                        </div> 
+                                        <div class="col-md-9 col-sm-9 col-xs-12 basket-padding"> 
+                                            <img class="img-responsive visible-xs col-xs-12"> 
+                                            <div class="col-sm-12 col-xs-12 basket-padding" style="text-transform: uppercase;"> 
+                                                <a class="col-xs-12 basket-padding fix-mobile-name" style="margin-bottom:15px;color:#444;font-weight:700;font-size:12px;" href="/produkt/pierscionek-zareczynowy-kartezja-model-p0170tb.html">Pierścionek zaręczynowy z brylantem z białego i żółtego złota P0170TB</a> 
+                                                <span class="col-sm-6 col-xs-9 ">rozmiar 9</span> 
+                                                <span class="price col-sm-6 col-xs-3" style="color:black;font-weight:700;font-size:16px;text-align:right;">9599<span>zł</span></span>
+                                            </div>
+                                            <a href="/basket/remove-product/product_id/1074/product_size/9" class="item-remove main-basket-item amr-ci-remove col-sm-12 col-xs-12" > Usuń produkt</a>
+                                        </div>
+                                    </div>
+                                    <style> @media(max-width:475px){ .basket-padding{ padding:0px; } .fix-mobile-name{ margin-left:15px; } }</style>
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-3 col-xs-12 hidden-xs">
+                                            <img class="img-responsive">
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-12 basket-padding">
+                                            <img class="img-responsive visible-xs col-xs-12">
+                                            <div class="col-sm-12 col-xs-12 basket-padding" style="text-transform: uppercase;">
+                                                <a class="col-xs-12 basket-padding fix-mobile-name" style="margin-bottom:15px;color:#444;font-weight:700;font-size:12px;" href="/produkt/pierscionek-zareczynowy-kartezja-model-p0203zb.html">Pierścionek zaręczynowy z brylantem z żółtego złota P0203ZB</a> 
+                                                <span class="col-sm-6 col-xs-9 ">rozmiar 14</span> <span class="price col-sm-6 col-xs-3" style="color:black;font-weight:700;font-size:16px;text-align:right;">1999<span>zł</span></span>
+                                            </div>
+                                            <a href="/basket/remove-product/product_id/1028/product_size/14" class="item-remove main-basket-item amr-ci-remove col-sm-12 col-xs-12" > Usuń produkt</a> 
+                                        </div>
+                                    </div> 
+                                </div> 
+                                <div class="row"> 
+                                    <div class="row"> 
+                                        <div class="col-sm-offset-2 col-sm-6 col-xs-8" style="border-top:1px solid black;padding-top:15px;margin-top:15px;">
+                                            <h5 style="color:#9c9e9e;font-weight:700;font-size:12px;">Wysyłka</h5>
+                                        </div> 
+                                        <div class="col-sm-4 col-xs-4 price" style="border-top:1px solid black;padding-top:15px;margin-top:15px;text-align: right"> 
+                                            <span class="amr-money amr-data-delivery-cost" style="color:black;font-weight:700;font-size:16px;" data-deliverycost="0">0<span>zł</span></span></small> 
+                                        </div>
+                                    </div>
+                                    <div id="discount-row" class="hidden row"> 
+                                        <div class="col-sm-offset-2 col-sm-6 col-xs-8"> 
+                                            <h5>Kod promocyjny</h5> </div> <div class="col-sm-4 col-xs-4 price" style="text-align: right"> 
+                                                <span class="amr-money" id="amr-data-discount-price" data-ordertotal="0">0<span>zł</span></span> 
+                                            </div>
+                                        </div>
+                                        <div class="row"> 
+                                            <div class="col-sm-offset-2 col-sm-6 col-xs-8">Razem</div> 
+                                            <div class="col-sm-4 col-xs-4 price" style="text-align: right"> 
+                                                <span class="amr-money amr-data-order-total" style="color:black;font-weight:700;font-size:16px;" data-base-order-price="" data-ordertotal="11598">11598<span>zł</span></span> 
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                    <button type="button" id="cart-agree-all" class="btn btn-block btn-aimor">Zaznacz wszystkie zgody</button> 
+                                    <fieldset id="fieldset-policies">
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-1 col-sm-11">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="basketorder[policies][aimor][]" id="basketorder-policies-aimor-1" value="1" />Zapoznałem się i akceptuję warunki <a target="_blank" href="/strona/regulamin,14.html">regulaminu ACLARI</a>. 
+                                                    <span style="color:red;">(WYMAGANE)</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-1 col-sm-11">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" name="basketorder[policies][newsletter][]" id="basketorder-policies-newsletter-1" value="1" />Wyrażam zgodę na wykorzystanie i przetwarzanie moich danych osobowych w celu przekazania mojego adresu e-mail do OPINEO Sp. z.o.o. oraz przetwarzanie moich danych osobowych w celu wypełnienia ankiety oceny procesu składania zamówienia, ankiety oceny realizacji zamówienia oraz ankiety oceny produktu.</a>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset> 
+                                    <div id="agreebox"> 
+                                        <div class="form-group"> 
+                                            <div class="col-sm-offset-1 col-sm-11"> 
+                                                <label class="checkbox optional"> 
+                                                    <input type="checkbox" id="accountControllAgreement" name="agreements[accountControllAgreement]" value="yes"> Wyrażam zgodę na przetwarzanie moich danych osobowych przez ACLARI w celu założenia i utrzymywania mojego konta użytkownika. <span style="color:red;">(WYMAGANE)</span> 
+                                                </label> 
+                                            </div> 
+                                        </div> 
+                                        <div class="form-group"> 
+                                            <div class="col-sm-offset-1 col-sm-11"> 
+                                                <label class="checkbox optional"> 
+                                                    <input id="rodoControllAgreement" type="checkbox" name="agreements[rodoControllAgreement]" value="yes"> Wyrażam zgodę na przetwarzanie moich danych osobowych w rozumieniu rozporządzenia RODO w celach marketingowych przez ACLARI.
+                                                </label> 
+                                            </div>
+                                        </div> 
+                                        <div class="form-group"> 
+                                            <div class="col-sm-offset-1 col-sm-11"> 
+                                                <label class="checkbox optional"> 
+                                                    <input type="checkbox" id="promotionControllAgreement" name="agreements[promotionControllAgreement]" value="yes"> Wyrażam zgodę na otrzymywanie drogą elektroniczną na wskazany przeze mnie adres e-mail informacji handlowej w rozumieniu art. 10 ustawy z dnia 18 lipca 2002 roku o świadczeniu usług drogą elektroniczną od ACLARI. 
+                                                </label> 
+                                            </div> 
+                                        </div> 
+                                        <button name="basketorder[action][accept]" id="basketorder-action-accept" type="submit" value="accept" class="btn btn-block btn-aimor">Potwierdź zakup</button> 
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </form>
+                </div>
+            </div>
