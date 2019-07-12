@@ -298,7 +298,7 @@
                                 <h2 class="heading">Wybierz kraj dostawy:</h2>
                             </div>
                             <div class="amr-col-lg text-center">
-                                <select name="basketorder[customer][kraj]" id="basketorder-customer-kraj" placeholder="Kraj" class="form-control"> 
+                                <select name="basketorder[customer][kraj]" id="basketorder-customer-kraj" placeholder="Kraj" class="amr-form-control"> 
                                     <option value="AT">Austria</option> 
                                     <option value="BE">Belgia</option> 
                                     <option value="BG">Bułgaria</option> 
@@ -381,7 +381,7 @@
                                         <div class="amr-form-group amr-row">
                                             <label for="staticEmail" class="amr-col-sm-4 col-form-label">Szczegóły<br>paczkomatu:*</label>
                                             <div class="amr-col-sm-8">
-                                                <select name="" id="" class="form-control">
+                                                <select name="" id="" class="amr-form-control">
                                                     <option value="">Aleksandrów Łódzki Piłsudskiego 2/4</option>
                                                     <option value="">Aleksandrów Łódzki Piłsudskiego 2/4</option>
                                                     <option value="">Aleksandrów Łódzki Piłsudskiego 2/4</option>
@@ -420,7 +420,7 @@
                                         <div class="amr-form-group amr-row">
                                             <label for="basketorder-pos-pos_id" class="amr-col-sm-4 col-form-label">Wybierz salon:*</label>
                                             <div class="amr-col-sm-8">
-                                                <select name="basketorder[pos][pos_id]" id="basketorder-pos-pos_id" class="form-control">
+                                                <select name="basketorder[pos][pos_id]" id="basketorder-pos-pos_id" class="amr-form-control">
                                                     <option value="2">Poznań, ul. Półwiejska 42 lok. 346</option>
                                                     <option value="3">Kraków, ul. Starowiślna 19</option>
                                                     <option value="4">Sopot, ul. Grunwaldzka 44</option>
@@ -489,7 +489,7 @@
                                 <div class="amr-form-group amr-form-row">
                                     <label for="basketorder-customer-kraj" class="amr-col-sm-4 col-form-label">Kraj:*</label>
                                     <div class="amr-col-sm-8">
-                                        <select name="basketorder[customer][kraj]" id="basketorder-customer-kraj" class="form-control">
+                                        <select name="basketorder[customer][kraj]" id="basketorder-customer-kraj" class="amr-form-control">
                                             <option value="AT">Austria</option> 
                                             <option value="BE">Belgia</option> 
                                             <option value="BG">Bułgaria</option> 
@@ -524,46 +524,50 @@
                                 <div class="amr-form-group amr-form-row">
                                     <label for="basketorder-customer-imie" class="amr-col-sm-4 col-form-label">Imię i nazwisko*:</label>
                                     <div class="amr-col-sm-8">
-                                        <input type="text" name="basketorder[customer][imie]" id="basketorder-customer-imie" class="form-control" placeholder="Wpisz swoje dane" required autocomplete="shipping name">
+                                        <input type="text" name="basketorder[customer][imie]" id="basketorder-customer-imie" class="amr-form-control is-invalid" placeholder="Wpisz swoje dane" required autocomplete="shipping name">
+                                        <div class="error-message">
+                                            <div class="error-message__arrow"></div>
+                                            <div class="error-message__body">Pole jest wymagane</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="amr-form-group amr-form-row">
                                     <label for="basketorder-customer-adres" class="amr-col-sm-4 col-form-label">Ulica*:</label>
                                     <div class="amr-col-8 amr-col-sm-5">
-                                        <input type="text" name="basketorder[customer][adres]" id="basketorder-customer-adres" class="form-control" placeholder="Wpisz ulicę" required autocomplete="shipping address-line1">
+                                        <input type="text" name="basketorder[customer][adres]" id="basketorder-customer-adres" class="amr-form-control" placeholder="Wpisz ulicę" required autocomplete="shipping address-line1">
                                     </div>
                                     <div class="amr-col-4 amr-col-sm-3">
-                                        <input type="text" name="basketorder[customer][numer]" id="basketorder-customer-numer" class="form-control" placeholder="Numer" required autocomplete="shipping address-line2">
+                                        <input type="text" name="basketorder[customer][numer]" id="basketorder-customer-numer" class="amr-form-control" placeholder="Numer" required autocomplete="shipping address-line2">
                                     </div>
                                 </div>
                                 <div class="amr-form-group amr-form-row">
                                     <label for="basketorder-customer-kod_pocztowy" class="amr-col-sm-4 col-form-label">Kod pocztowy:</label>
                                     <div class="amr-col-sm-8">
-                                        <input type="text" name="basketorder[customer][kod_pocztowy]" id="basketorder-customer-kod_pocztowy" class="form-control" placeholder="Kod pocztowy" required autocomplete="shipping postal-code">
+                                        <input type="text" name="basketorder[customer][kod_pocztowy]" id="basketorder-customer-kod_pocztowy" class="amr-form-control" placeholder="Kod pocztowy" required autocomplete="shipping postal-code">
                                     </div>
                                 </div>
                                 <div class="amr-form-group amr-form-row">
                                     <label for="basketorder-customer-miejscowosc" class="amr-col-sm-4 col-form-label">Miejscowość:</label>
                                     <div class="amr-col-sm-8">
-                                        <input type="text" name="basketorder[customer][miejscowosc]" id="basketorder-customer-miejscowosc" class="form-control" placeholder="Miejscowość" required autocomplete="shipping address-level2">
+                                        <input type="text" name="basketorder[customer][miejscowosc]" id="basketorder-customer-miejscowosc" class="amr-form-control" placeholder="Miejscowość" required autocomplete="shipping address-level2">
                                     </div>
                                 </div>
                                 <div class="amr-form-group amr-form-row">
                                     <label for="basketorder-customer-komentarz" class="amr-col-sm-4 col-form-label">Komentarz:</label>
                                     <div class="amr-col-sm-8">
-                                        <textarea type="text" name="basketorder[customer][komentarz]" id="basketorder-customer-komentarz" class="form-control" rows="3" placeholder="Tutaj wpisz treść komentarza"></textarea>
+                                        <textarea type="text" name="basketorder[customer][komentarz]" id="basketorder-customer-komentarz" class="amr-form-control" rows="3" placeholder="Tutaj wpisz treść komentarza"></textarea>
                                     </div>
                                 </div>
                                 <div class="amr-form-group amr-form-row">
                                     <label for="basketorder-customer-telefon" class="amr-col-sm-4 col-form-label">Numer telefonu*:</label>
                                     <div class="amr-col-sm-8">
-                                        <input type="tel" name="basketorder[customer][telefon]" id="basketorder-customer-telefon" class="form-control" placeholder="Wpisz swój numer telefonu" required autocomplete="tel">
+                                        <input type="tel" name="basketorder[customer][telefon]" id="basketorder-customer-telefon" class="amr-form-control" placeholder="Wpisz swój numer telefonu" required autocomplete="tel">
                                     </div>
                                 </div>
                                 <div class="amr-form-group amr-form-row">
                                     <label for="basketorder-customer-email" class="amr-col-sm-4 col-form-label">Adres e-mail*:</label>
                                     <div class="amr-col-sm-8">
-                                        <input type="tel" name="basketorder[customer][email]" id="basketorder-customer-email" class="form-control" placeholder="Wpisz swój adres e-mail" required autocomplete="email">
+                                        <input type="tel" name="basketorder[customer][email]" id="basketorder-customer-email" class="amr-form-control" placeholder="Wpisz swój adres e-mail" required autocomplete="email">
                                     </div>
                                 </div>
                                 <div class="amr-form-group amr-form-row">
@@ -876,6 +880,11 @@
             });
         }
     }
+    
+
+    function hasScrollBar() {
+        return document.documentElement.scrollHeight > window.innerHeight;
+    }
 
     $('input[name="basketorder[delivery][dmethod]"]').change(function(){
        if($(this).val() === "2") {
@@ -906,7 +915,25 @@
         }
     });
     
+    $('.amr-modal').on('show.bs.modal', function (e) {
+        if (hasScrollBar()) {
+            $('body').css("padding-right", "12px");
+            $('.navbar').css("padding-right", "12px");
+            e.target.style.paddingRight = "12px";
+        }
+    });
+
+    $('.amr-modal').on('hidden.bs.modal', function (e) {
+        if (hasScrollBar()) {
+            $('body').css("padding-right", "");
+            $('.navbar').css("padding-right", "");
+            e.target.style.paddingRight = "";
+        }
+    });
+
     new multiStepForm(document.querySelector('.cart-form'));
+    
+    
 
 })();
 </script> 
